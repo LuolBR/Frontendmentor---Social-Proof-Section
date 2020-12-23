@@ -4,14 +4,28 @@ $neutral1 : hsl(303, 10%, 53%);
 $neutral2 : hsl(300, 24%, 96%);
 $neutral3 : hsl(0, 0%, 100%);
 
+@mixin rateStyle {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;    
+    background-color: $neutral2;
+    border-radius: 10px;
+
+    p{
+        margin-left: 15px;
+        font-weight: 700;
+        color: $primaryColor1
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     max-width: 1440px;
 }
 body {
-    height: 100vh;
-    margin: 100px;
+    margin: 10% 10%;
     font-family: 'Spartan', sans-serif;
     font-size: 15px;
 }
@@ -19,43 +33,104 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    width: 80vw;
+}
 
-    .main-text {
-        width: 35vw;
-
-        h1 {
-            font-weight: 700;
-            font-size: 2em;
-            color: $primaryColor1;
-        }
-
-        p {
-            margin-top: 10px;
-            color: $neutral1;
-        }
+.main-text {
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+        
+    h1 {
+        font-weight: bolder;
+        font-size: 3em;
+        color: $primaryColor1;  
     }
 
-    .rate {
-        ul {
-            list-style-type: none;
+    p {
+        margin-top: 5px;
+        color: $neutral1; 
+        flex-grow: 1;
+    }
+}
 
-            li {
-                .star {
-                    padding: 5px;
-                }
-            }
+.rate {
+    width: 35vw;
+    padding: 10px;    
+    
+    ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;  
+        grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+        row-gap: 15px;
+
+        .rate1 {
+            @include rateStyle();
+            grid-column: 1/4;
         }
+
+        .rate2 {
+            @include rateStyle();
+            grid-column: 2/5;
+        }
+
+        .rate3 {
+            @include rateStyle();
+            grid-column: 3/6;         
+        }
+    }
+}
+
+.stars {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+    svg {
+        padding: 0 3px;
     }
 }
 
 .depoiments {
     margin-top: 50px;
-    width: 30vw;
-    width: 80vw;
-    display: flex;
-    justify-content: space-between;
+    height: 250px;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 20px;
 }
+
+.depoiment1 {
+    padding: 30px;
+    background-color: $primaryColor1;
+    border-radius: 10px;   
+    
+    .person1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr .1fr 1fr;
+        
+        img {
+            grid-row: 1/4;
+        }
+    
+        h2 {
+           color: $neutral2;
+           font-size: 15px;
+           font-weight: 500;
+           grid-column: 2/4;
+        }
+
+        h3 {
+           color: $primaryColor2;
+           font-size: 15px;
+           font-weight: 400;
+           grid-column: 2/4;
+        }
+    }
+}
+
+
 
 .attribution {
     margin-top: 50px;

@@ -5,8 +5,7 @@
 }
 
 body {
-  height: 100vh;
-  margin: 100px;
+  margin: 10% 10%;
   font-family: 'Spartan', sans-serif;
   font-size: 15px;
 }
@@ -18,42 +17,183 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 80vw;
 }
 
-header .main-text {
+.main-text {
   width: 35vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-header .main-text h1 {
-  font-weight: 700;
-  font-size: 2em;
+.main-text h1 {
+  font-weight: bolder;
+  font-size: 3em;
   color: #502050;
 }
 
-header .main-text p {
-  margin-top: 10px;
+.main-text p {
+  margin-top: 5px;
   color: #937b92;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-header .rate ul {
+.rate {
+  width: 35vw;
+  padding: 10px;
+}
+
+.rate ul {
   list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 2fr 6fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+  row-gap: 15px;
 }
 
-header .rate ul li .star {
-  padding: 5px;
+.rate ul .rate1 {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #f7f2f7;
+  border-radius: 10px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.rate ul .rate1 p {
+  margin-left: 15px;
+  font-weight: 700;
+  color: #502050;
+}
+
+.rate ul .rate2 {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #f7f2f7;
+  border-radius: 10px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+}
+
+.rate ul .rate2 p {
+  margin-left: 15px;
+  font-weight: 700;
+  color: #502050;
+}
+
+.rate ul .rate3 {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #f7f2f7;
+  border-radius: 10px;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3/6;
+}
+
+.rate ul .rate3 p {
+  margin-left: 15px;
+  font-weight: 700;
+  color: #502050;
+}
+
+.stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.stars svg {
+  padding: 0 3px;
 }
 
 .depoiments {
   margin-top: 50px;
-  width: 30vw;
-  width: 80vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  height: 250px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.depoiment1 {
+  padding: 30px;
+  background-color: #502050;
+  border-radius: 10px;
+}
+
+.depoiment1 .person1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: 1fr .1fr 1fr;
+      grid-template-rows: 1fr .1fr 1fr;
+}
+
+.depoiment1 .person1 img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+}
+
+.depoiment1 .person1 h2 {
+  color: #f7f2f7;
+  font-size: 15px;
+  font-weight: 500;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+.depoiment1 .person1 h3 {
+  color: #ee68a4;
+  font-size: 15px;
+  font-weight: 400;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
 }
 
 .attribution {
