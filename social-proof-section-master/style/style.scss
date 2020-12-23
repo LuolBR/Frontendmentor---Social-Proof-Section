@@ -1,0 +1,66 @@
+$primaryColor1 : hsl(300, 43%, 22%);
+$primaryColor2 : hsl(333, 80%, 67%);
+$neutral1 : hsl(303, 10%, 53%);
+$neutral2 : hsl(300, 24%, 96%);
+$neutral3 : hsl(0, 0%, 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+}
+body {
+    height: 100vh;
+    margin: 100px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+
+    .main-text {
+        width: 35vw;
+
+        h1 {
+            font-weight: 700;
+            font-size: 2em;
+            color: $primaryColor1;
+        }
+
+        p {
+            margin-top: 10px;
+            color: $neutral1;
+        }
+    }
+
+    .rate {
+        ul {
+            list-style-type: none;
+
+            li {
+                .star {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
+
+.depoiments {
+    margin-top: 50px;
+    width: 30vw;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.attribution {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
