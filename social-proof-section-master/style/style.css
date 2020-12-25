@@ -180,7 +180,25 @@ main {
 }
 
 .depoiment1 p {
+  margin-top: 25px;
   color: #f7f2f7;
+}
+
+.depoiment1 .person1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.depoiment1 .person1 .pics {
+  border-radius: 50%;
+}
+
+.depoiment1 .person1 .name {
+  padding: 15px;
 }
 
 .depoiment1 .person1 h2 {
@@ -204,7 +222,25 @@ main {
 }
 
 .depoiment2 p {
+  margin-top: 25px;
   color: #f7f2f7;
+}
+
+.depoiment2 .person2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.depoiment2 .person2 .pics {
+  border-radius: 50%;
+}
+
+.depoiment2 .person2 .name {
+  padding: 15px;
 }
 
 .depoiment2 .person2 h2 {
@@ -228,7 +264,25 @@ main {
 }
 
 .depoiment3 p {
+  margin-top: 25px;
   color: #f7f2f7;
+}
+
+.depoiment3 .person3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.depoiment3 .person3 .pics {
+  border-radius: 50%;
+}
+
+.depoiment3 .person3 .name {
+  padding: 15px;
 }
 
 .depoiment3 .person3 h2 {
@@ -255,5 +309,146 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+}
+
+@media (max-width: 850px) {
+  .depoiments {
+    width: 80%;
+  }
+  .rate ul .rate1 {
+    margin-right: 0px;
+  }
+  .rate ul .rate2 {
+    margin: 20px 0px;
+  }
+  .rate ul .rate3 {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    margin: 5%;
+  }
+  .depoiments {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .depoiment1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .depoiment2 {
+    width: 100%;
+    margin: 15px 0px;
+  }
+  .depoiment3 {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 667px) {
+  body {
+    margin-top: 50px;
+  }
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-text {
+    width: 100%;
+  }
+  .main-text h1 {
+    margin: 0px 50px;
+    text-align: center;
+  }
+  .main-text p {
+    margin: 20px 50px;
+    text-align: center;
+  }
+  .rate {
+    width: 100%;
+  }
+  .rate ul {
+    width: 100%;
+  }
+  .rate ul .rate1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .rate ul .rate1 p {
+    margin-top: 15px;
+  }
+  .rate ul .rate2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .rate ul .rate2 p {
+    margin-top: 15px;
+  }
+  .rate ul .rate3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .rate ul .rate3 p {
+    margin-top: 15px;
+  }
+  .attribution p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 428px) {
+  .main-text h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    margin-top: 50px;
+  }
+  .main-text h1 {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

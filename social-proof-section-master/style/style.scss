@@ -19,18 +19,40 @@ $neutral3 : hsl(0, 0%, 100%);
     }
 }
 
+@mixin rateStyle667px () {
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+                
+    p {
+        margin-top: 15px;
+    }
+}
+
 @mixin depoimentStyle() {
     width: 30%;
     padding: 30px;
     background-color: $primaryColor1;
     border-radius: 10px; 
-
+    
     p {
+        margin-top: 25px;
         color: $neutral2;
     }
 }
 
 @mixin personStyle() {
+    display: flex;
+    align-items: center;
+
+    .pics {
+        border-radius: 50%;
+    }
+
+    .name {
+        padding: 15px;
+    }
+
     h2 {
         color: $neutral2;
         font-size: 15px;
@@ -140,7 +162,7 @@ main {
     @include depoimentStyle();
     
     .person1 {
-        @include personStyle();
+        @include personStyle();        
     }
 }
 
@@ -150,15 +172,16 @@ main {
 
     .person2 {
         @include personStyle();
+        
     }
 }
 
 .depoiment3 { 
     margin-top: 30px;
     @include depoimentStyle();
-    
+        
     .person3 {
-        @include personStyle();
+        @include personStyle();       
     }
 }
 
@@ -167,5 +190,115 @@ main {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+}
+
+@media (max-width: 850px) {
+    .depoiments {
+        width: 80%;
+    }
+
+    .rate ul .rate1 {
+        margin-right: 0px;
+    }
+    .rate ul .rate2 {
+        margin: 20px 0px;
+    }
+    .rate ul .rate3 {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 750px) {
+    body {
+        margin: 5%;
+    }
+
+    .depoiments {
+        width: 100%;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .depoiment1 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .depoiment2 {
+        width: 100%;
+        margin: 15px 0px;
+    }
+
+    .depoiment3 {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 667px) {
+    body {
+        margin-top: 50px;
+    }
+
+    .header {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-text {
+        width: 100%;
+        
+        h1 {
+            margin: 0px 50px;
+            text-align: center;
+        }
+
+        p {
+            margin: 20px 50px;
+            text-align: center;
+        }
+    }
+
+    .rate {
+        width: 100%;
+
+        ul {
+            width: 100%;
+
+            .rate1 {
+                @include rateStyle667px();
+            }
+
+            .rate2 {
+               @include rateStyle667px();
+            }
+
+            .rate3 {
+                @include rateStyle667px();
+            }
+        }
+    }
+
+    .attribution p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 428px) {
+    .main-text h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 375px) {  
+    body {
+        margin-top: 50px;
+    }
+    
+    .main-text h1 {
+        
+        font-size: 2em;
+    }
 }
 
